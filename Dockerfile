@@ -1,3 +1,6 @@
 FROM node:18
+
 RUN npm install -g pm2
-CMD ["pm2-runtime"]
+RUN npm install -g telegram-cli-bot
+
+CMD ["pm2-runtime", "telegram-cli-bot"]
